@@ -58,6 +58,26 @@ function setupTelegram() {
 
   tg.ready();
   tg.expand();
+
+  if (typeof tg.disableVerticalSwipes === "function") {
+    tg.disableVerticalSwipes();
+  }
+
+  if (typeof tg.setHeaderColor === "function") {
+    tg.setHeaderColor("#090b10");
+  }
+
+  if (typeof tg.setBackgroundColor === "function") {
+    tg.setBackgroundColor("#090b10");
+  }
+
+  if (typeof tg.setBottomBarColor === "function") {
+    tg.setBottomBarColor("#090b10");
+  }
+
+  if (typeof tg.requestFullscreen === "function" && !tg.isFullscreen) {
+    tg.requestFullscreen();
+  }
 }
 
 function loadState() {

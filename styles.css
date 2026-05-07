@@ -61,7 +61,7 @@ body::after {
 .app {
   width: min(100%, 480px);
   margin: 0 auto;
-  padding: 24px 16px 40px;
+  padding: max(24px, env(safe-area-inset-top)) 16px max(40px, env(safe-area-inset-bottom));
 }
 
 .hero-card,
