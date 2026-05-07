@@ -61,7 +61,7 @@ body::after {
 .app {
   width: min(100%, 480px);
   margin: 0 auto;
-  padding: max(24px, env(safe-area-inset-top)) 16px max(40px, env(safe-area-inset-bottom));
+  padding: calc(max(24px, env(safe-area-inset-top)) + 44px) 16px max(40px, env(safe-area-inset-bottom));
 }
 
 .hero-card,
@@ -74,7 +74,7 @@ body::after {
 }
 
 .hero-card {
-  padding: 24px;
+  padding: 30px 24px 24px;
 }
 
 .eyebrow,
@@ -156,7 +156,7 @@ h1 {
 
 .counter-card {
   margin-top: 18px;
-  padding: 24px;
+  padding: 28px 24px 24px;
 }
 
 .counter-header {
