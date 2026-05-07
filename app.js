@@ -58,14 +58,6 @@ function setupTelegram() {
 
   tg.ready();
   tg.expand();
-
-  const backgroundColor = tg.themeParams.bg_color || "#f4efe7";
-  const textColor = tg.themeParams.text_color || "#1d160f";
-  const hintColor = tg.themeParams.hint_color || "#6c5a4b";
-
-  document.documentElement.style.setProperty("--tg-bg", backgroundColor);
-  document.documentElement.style.setProperty("--tg-text", textColor);
-  document.documentElement.style.setProperty("--tg-hint", hintColor);
 }
 
 function loadState() {
