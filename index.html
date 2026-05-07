@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Push Tracker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="hero-card">
+        <p class="eyebrow">Твой челлендж</p>
+        <h1>Счётчик отжиманий</h1>
+        <p class="subtitle">
+          Поставь цель и отмечай каждый подход прямо с главного экрана.
+        </p>
+
+        <form class="goal-form" id="goal-form">
+          <label class="field-label" for="goal-input">Цель по отжиманиям</label>
+          <div class="goal-input-row">
+            <input
+              id="goal-input"
+              class="goal-input"
+              type="number"
+              min="1"
+              step="1"
+              inputmode="numeric"
+              placeholder="Например, 10000"
+            />
+            <button class="save-goal-button" type="submit">Сохранить</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="counter-card">
+        <div class="counter-header">
+          <p class="counter-label">Прогресс</p>
+          <p class="counter-percent" id="counter-percent">0%</p>
+        </div>
+
+        <div class="counter-box">
+          <span class="counter-value" id="completed-value">0</span>
+          <span class="counter-divider">из</span>
+          <span class="counter-target" id="goal-value">10 000</span>
+        </div>
+
+        <div class="progress-track" aria-hidden="true">
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
+
+        <div class="controls" aria-label="Управление количеством отжиманий">
+          <div class="control-column">
+            <button class="action-button action-button-minus" data-delta="-10" type="button">
+              -10
+            </button>
+            <button class="action-button action-button-minus" data-delta="-1" type="button">
+              -1
+            </button>
+          </div>
+
+          <div class="count-pill">
+            <span id="count-caption">Сделано</span>
+          </div>
+
+          <div class="control-column">
+            <button class="action-button action-button-plus" data-delta="1" type="button">
+              +1
+            </button>
+            <button class="action-button action-button-plus" data-delta="10" type="button">
+              +10
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
